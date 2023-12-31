@@ -423,90 +423,39 @@
                         }
                     </style>
 
-                    <script>
-                        const galleryContainer = document.getElementById('gallery-container');
-                        const galleryImages = galleryContainer.getElementsByClassName('gallery-image');
-                        
+<script>
+    const galleryContainer = document.getElementById('gallery-container');
+    const galleryImages = galleryContainer.getElementsByClassName('gallery-image');
+    let currentIndex = 0;
 
-                        function showImage(index) {
-                            for (let i = 0; i < galleryImages.length; i++) {
-                                galleryImages[i].style.display = 'none';
-                            }
-                            currentIndex = (index + galleryImages.length) % galleryImages.length;
-                            galleryImages[currentIndex].style.display = 'block';
-                        }
+    // Function to show a specific image
+    function showImage(index) {
+        for (let i = 0; i < galleryImages.length; i++) {
+            galleryImages[i].style.display = 'none';
+        }
+        currentIndex = (index + galleryImages.length) % galleryImages.length;
+        galleryImages[currentIndex].style.display = 'block';
+    }
 
-                        function nextImage() {
-                            showImage(currentIndex + 1);
-                        }
+    // Function for the "Next" button
+    function nextImage() {
+        showImage(currentIndex + 1);
+    }
 
-                        function prevImage() {
-                            showImage(currentIndex - 1);
-                        }
+    // Function for the "Previous" button
+    function prevImage() {
+        showImage(currentIndex - 1);
+    }
 
-                        // Handle next and previous buttons
-                        nextButton.addEventListener('click', nextImage);
-                        prevButton.addEventListener('click', prevImage);
+    // Handle next and previous buttons
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+    prevButton.addEventListener('click', prevImage);
+    nextButton.addEventListener('click', nextImage);
 
-                        // Initially, hide all images except the first one
-                        showImage(currentIndex);
-                    </script>
-                    <!-- // end galary part -->
-                    <footer>
-                        <p>&copy; 2023 Grampanchayat Pundi. All rights reserved.</p>
-                        <p>
-                            Website Designed, Developed, Hosted & maintained by Atesh bhalerao. Content provided by Grampanchayat Office Pundi.
-                            Copyright © 2023   Grampanchayat Pundi
-                        </p>
-                    </footer>
-                    <script>
-                        // JavaScript for the image slideshow
-                        let currentIndex = 0;
-                        const images = document.querySelectorAll(".gallery-image");
-                        const prevButton = document.getElementById("prev-button");
-                        const nextButton = document.getElementById("next-button");
+    // Initially, hide all images except the first one
+    showImage(currentIndex);
+</script>
 
-                        const autoChangeInterval = 3000; // Change image every 3 seconds
-                        let autoChangeTimer;
-
-                        function showImage(index) {
-                            for (let i = 0; i < images.length; i++) {
-                                images[i].style.display = "none";
-                            }
-                            currentIndex = (index + images.length) % images.length;
-                            images[currentIndex].style.display = "block";
-                        }
-
-                        function nextImage() {
-                            showImage(currentIndex + 1);
-                            resetAutoChangeTimer();
-                        }
-
-                        function prevImage() {
-                            showImage(currentIndex - 1);
-                            resetAutoChangeTimer();
-                        }
-
-                        function autoChange() {
-                            nextImage();
-                            autoChangeTimer = setTimeout(autoChange, autoChangeInterval);
-                            function resetAutoChangeTimer() {
-                            }
-
-                            function resetAutoChangeTimer() {
-                                function resetAutoChangeTimer() {
-                                    clearTimeout(autoChangeTimer);
-                                    autoChangeTimer = setTimeout(autoChange, autoChangeInterval);
-                                }
-
-                                // Handle next and previous buttons
-                                nextButton.addEventListener("click", nextImage);
-                                prevButton.addEventListener("click", prevImage);
-
-                                // Initially, hide all images except the first one and start auto change
-                                showImage(currentIndex);
-                                showImage(currentIndex);
-                                resetAutoChangeTimer();
-                    </script>
                 </body>
 </html>
