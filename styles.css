@@ -1,5 +1,5 @@
 #container {
-    max-width: 2000px; /* Set a maximum width for the container */
+    max-width: 2500px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container horizontally on the page */
     padding: 50px; /* Add padding as needed */
     box-sizing: border-box; /* Include padding and border in the total width and height */
