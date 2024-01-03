@@ -1,10 +1,10 @@
 #container {
-    max-width: 2500px; /* Set a maximum width for the container */
+    max-width: 800px; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container horizontally on the page */
-    padding: 50px; /* Add padding as needed */
+    padding: 20px; /* Add padding as needed */
     box-sizing: border-box; /* Include padding and border in the total width and height */
     border: 1px solid #336699; /* Add a border as needed */
-    border-radius: 10px; /* Add border radius for a rounded look */
+    border-radius: 5px; /* Add border radius for a rounded look */
 }
 
 /* Responsive styles using media queries */
